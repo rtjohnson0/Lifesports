@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "lifesports project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtjohnson0/Lifesports.git"
+  },
+  "author": "Reggie Johnson, Arely Guevara,Daisha Pettus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rtjohnson0/Lifesports/issues"
+  },
+  "homepage": "https://github.com/rtjohnson0/Lifesports#readme"
+}
