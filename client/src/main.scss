@@ -1,0 +1,101 @@
+// styles for the exercise log table
+h3 {
+    text-align: center;
+}
+.table {    
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #dee2e6;
+    margin: auto;
+    padding: 1px;
+    border-collapse: separate;
+    border-spacing: 0;
+    @media (max-width: 600px){
+        font-size: 13px;
+    }
+}
+.table .thead-light th {
+    background-color: white; 
+}
+  
+.table td {
+    border-top: none;
+    a {
+    color: black;
+    text-decoration: underline;
+    }
+}
+
+.table th {
+    background-color: white; 
+    border-top: none;
+}
+tr:nth-of-type(odd) {
+    background-color: #eee;
+}
+
+//styles for the creating new user page
+.new-user{
+        background-color: #eee;
+        width: 30%;
+        margin: 0 auto;
+        padding: 0 20px 30px;
+        border-radius: 5px;
+    h3 {
+        margin: 40px auto;
+        padding: 10px 0 0;
+    }
+    .form-control {
+        margin: 40px auto 35px;
+    }
+    .form-btn {
+        width: 112px;
+        margin: 0 auto;
+    }
+}
+
+
+//styles for creating new exercise log
+.new-workout {
+    background-color: #eee;
+    margin: 0 auto;
+    border-radius: 5px;
+    @media (min-width: 500px){
+            width: 70%;
+        }
+        @media (min-width: 740px){
+            width: 50%;
+        }
+        @media (min-width: 1000px){
+            width: 32%;
+        } 
+    label {
+        margin-bottom: 0.5rem;
+        
+    }
+    h3 {
+        margin: 40px auto 0;
+        padding: 15px 0;
+    }
+    form {
+        padding: 0 15px 40px;
+        border-radius: 15px; 
+    }
+    .form-group{
+        width: 280px;
+        margin: 10px auto;
+    }
+    .date-input {
+        padding: .375rem .75rem;
+        display: block;
+        width: 145%;
+        border-radius: .25rem;
+        border: 1px solid #ced4da;
+    }
+    .form-btn {
+        margin: 20px auto 0;
+        width: 175px;
+    }
+    .btn {
+        width: 175px;
+    }
+}
