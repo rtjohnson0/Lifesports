@@ -2,20 +2,22 @@
   "name": "lifesports",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
-    "concurrently": "^5.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "morgan": "^1.9.1",
-    "nodemon": "^1.19.3",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "if-env": "^1.0.4",
+    "mongoose": "^5.7.5",
+    "morgan": "^1.9.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node index.js",
+    "start:dev": "concurrently \"nodemon server.js --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,5 +43,9 @@
   "bugs": {
     "url": "https://github.com/rtjohnson0/Lifesports/issues"
   },
-  "homepage": "https://github.com/rtjohnson0/Lifesports#readme"
+  "homepage": "https://github.com/rtjohnson0/Lifesports#readme",
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^1.19.4"
+  }
 }

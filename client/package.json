@@ -2,14 +2,15 @@
   "name": "lifesports",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000/",
   "dependencies": {
-    "concurrently": "^5.0.0",
-    "express": "^4.17.1",
-    "morgan": "^1.9.1",
-    "nodemon": "^1.19.3",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-datepicker": "^2.5.0",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,15 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rtjohnson0/Lifesports.git"
-  },
-  "author": "Reggie Johnson, Arely Guevara,Daisha Pettus",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rtjohnson0/Lifesports/issues"
-  },
-  "homepage": "https://github.com/rtjohnson0/Lifesports#readme"
+  }
 }
