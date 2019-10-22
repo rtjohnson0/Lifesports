@@ -15,21 +15,22 @@ const Nav = () =>{
 
 <header>
 
-<div class="w3-sidebar w3-black w3-bar-block w3-collapse w3-card w3-animate-left" width="25%" id="mySideBar">
+<div class="w3-sidebar bg-dark w3-bar-block w3-collapse w3-animate-left" id="mySideBar">
 <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick={Open}>Close &times;</button>
-  <h3 class="w3-bar-item text-center">Reginald Johnson</h3>
+  <h3 class="w3-bar-item text-center text-white">Reginald Johnson</h3>
   <img src="images/ReggieMeme.png" alt="Car" width="100%" />
 
-  <a href="#" class="w3-bar-item text-center">Height</a>
-  <a href="#" class="w3-bar-item text-center">5'9</a>
-  <hr />
-  <a href="#" class="w3-bar-item text-center">Age</a>
-  <a href="#" class="w3-bar-item text-center">22</a>
-  <hr />
-  <a href="#" class="w3-bar-item text-center">Hometown</a>
-  <a href="#" class="w3-bar-item text-center">Washington D.C.</a>
-  <hr />
+  <a href="#" class="w3-bar-item text-center text-white">Height</a>
+  <a href="#" class="w3-bar-item text-center text-white">5'9</a>
+  <hr className="bg-white" />
+  <a href="#" class="w3-bar-item text-center text-white">Age</a>
+  <a href="#" class="w3-bar-item text-center text-white">22</a>
+  <hr className="bg-white"/>
+  <a href="#" class="w3-bar-item text-center text-white">Hometown</a>
+  <a href="#" class="w3-bar-item text-center text-white">Washington D.C.</a>
+  <hr className ="bg-white" />
 </div>
+
 
 
 
