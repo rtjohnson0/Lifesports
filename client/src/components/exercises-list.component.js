@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
 const Exercise = props => (
+
   <tr>
     <td>{props.exercise.username}</td>
     <td>{props.exercise.description}</td>
@@ -12,6 +14,7 @@ const Exercise = props => (
       <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
     </td>
   </tr>
+ 
 )
 
 export default class ExercisesList extends Component {
@@ -51,6 +54,8 @@ export default class ExercisesList extends Component {
   render() {
     return (
       <div>
+        
+  
         <h3>Logged Exercises</h3>
         <table className="table">
           <thead className="thead-light">
@@ -67,6 +72,8 @@ export default class ExercisesList extends Component {
           </tbody>
         </table>
       </div>
+      
+      
     )
   }
 }
