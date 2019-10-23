@@ -1,26 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../App.css';
 
-function Navbar(){ 
-    return (
-      <div className="container-fluid">
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">LifeSports</Link>
-        <div className="collpase navbar-collapse">
+function Navbar() {
+  return (
+
+    <nav className="navbar navbar-expand-lg">
+      <Link to="/" className="navbar-brand">LifeSports</Link>
+      <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="navbar-item">
-          <Link to="/" className="nav-link">Exercises</Link>
+            <Link to="/" className="nav-link">Exercises</Link>
           </li>
           <li className="navbar-item">
-          <Link to="/create" className="nav-link">Post New Workout</Link>
+            <Link to="/create" className="nav-link">Post New Workout</Link>
           </li>
           <li className="navbar-item">
-          <Link to="/user" className="nav-link">Create User</Link>
+            <Link to="/user" className="nav-link">Create User</Link>
           </li>
         </ul>
-        </div>
-      </nav>
       </div>
-    );  
+    </nav>
+
+  );
 }
 export default Navbar

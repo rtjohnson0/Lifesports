@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../index.css';
 
 export default class CreateUser extends Component {
   constructor(props) {
@@ -41,15 +42,15 @@ export default class CreateUser extends Component {
       <div className="new-user">
         <h3>Create New User</h3>
         <form onSubmit={this.onSubmit}>
-          <div className="form-group text-center"> 
+          <div className="form-group text-center">
             <label className="sr-only">Username: </label>
-            <input  type="text"
-                required
-                className="form-control col-8 "
-                value={this.state.username}
-                onChange={this.onChangeUsername}
-                placeholder='username'
-                />
+            <input type="text"
+              required
+              className="form-control col-8 "
+              value={this.state.username}
+              onChange={this.onChangeUsername}
+              placeholder='username'
+            />
           </div>
           <div className="form-group form-btn">
             <input type="submit" value="Create User" className="btn btn-primary" />
