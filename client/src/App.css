@@ -1,3 +1,7 @@
+.newColor {
+  background: linear-gradient(162deg, #f29003 21%, #fafafa 98%);
+}
+
 * {
   margin: 0px;
   padding: 0px;

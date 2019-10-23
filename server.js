@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // connection to database
-mongoose.connect(uri, { 
+mongoose.connect(process.env.ATLAS_URI, { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
