@@ -14,9 +14,7 @@ const Profile = () => {
 
                     <div class="tile">
 
-
-
-                        <div class="item youtube">
+                 <div class="item youtube">
                             <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
                             <hr className="bg-light" />
 
@@ -25,9 +23,6 @@ const Profile = () => {
                             </video>
 
                         </div>
-
-
-
 
                         <div class="dates">
                             <div class="start ">
@@ -89,20 +84,12 @@ const Profile = () => {
                         </div>
 
 
-
-
                     </div>
                 </div>
 
             </div>
 
-
-
         </>
-
-
-
-
 
 
     )

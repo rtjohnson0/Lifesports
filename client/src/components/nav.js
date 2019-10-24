@@ -11,8 +11,6 @@ const Nav = () =>{
   }
     return(
 
-
-
 <header>
 
 <div class="w3-sidebar w3-orange w3-bar-block w3-collapse w3-animate-left" id="mySideBar">
@@ -31,8 +29,6 @@ const Nav = () =>{
   <a href="#" class="w3-bar-item text-center text-white">Cleveland, OH</a>
   <hr className ="bg-white" />
 </div>
-
-
 
 
 </header>
