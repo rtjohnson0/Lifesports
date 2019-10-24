@@ -4,22 +4,16 @@ import axios from 'axios';
 
 const AddUser = () => {
   const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
   const [error, setError] = useState();
 
   const authenticate = async () => {
     try{
-      const user = {
-        username, password
-      }
-      const res = await axios.post('/users/sign-up', user)
-     
-        console.log(res.data)
-      
+      const res = await axios.post('/users/add', username)
+      console.log(res.data)
       window.location = '/login'
     }
     catch(e){
-      setError(true);
+      console.log(e)
     }
   }
 
@@ -36,7 +30,7 @@ const AddUser = () => {
              placeholder='username'
            />
          </div>
-         <div className="form-group text-center">
+         {/* <div className="form-group text-center">
            <label className="sr-only">Password: </label>
            <input type="password"
              required
@@ -44,9 +38,9 @@ const AddUser = () => {
              onChange={e => setPassword(e.target.value)}
              placeholder='password'
            />
-         </div>
+         </div> */}
          <div className="form-group form-btn">
-          <button className="btn" onClick={authenticate}>Sign Up</button>
+          <button className="btn" onClick={authenticate}>Add User</button>
           
          </div>
         {/* <Link to="/login">Already have an account? Log In!</Link> */}
