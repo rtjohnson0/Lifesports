@@ -16,7 +16,7 @@ const Navs = (props) =>{
     const fetchUsers = async () => {
         try {
             const res = await axios.get('/exercises/')
-            setUser(res.data[0])
+            setUser(res.data)
             console.log(res.data[0])
           }
           catch(e){

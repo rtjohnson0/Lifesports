@@ -73,7 +73,7 @@ const CreateUser = () => {
            />
          </div>
          <div className="form-group form-btn">
-          <button className="btn btn-primary" onClick={authenticate}>Sign Up</button>
+          <button className="btn" onClick={authenticate}>Sign Up</button>
           
          </div>
         <Link to="/login">Already have an account? Log In!</Link>

@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
+import {Navbar} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-function Navbar(props) {
+function NavbarNav(props) {
 
   const {display, setDisplay} = props;
 
@@ -60,42 +61,42 @@ function Navbar(props) {
   }, [])
 
   return (
-    <nav className="navbar navbar-expand-lg">
+    <Navbar expand="lg">
       <Link to="/" className="navbar-brand">LifeSports</Link>
-      <div className="collpase navbar-collapse">
+      <Navbar.Toggle aria-controls='basic-navbar-nav'/>
+      <Navbar.Collapse id='basic-navbar-nav'>
       {display === "noAuth" ?
-    
+      //if user is not authenticated only show them login button
       <>
           <ul className="navbar-nav mr-auto">
-          
         </ul>
         <Link to='/login'>
-          <button className="btn btn-primary">Login</button>
+          <button className="btn greeting-btn">Login</button>
         </Link>
         </>:
+        // if user is authenticated show them all options
         <>
         <ul className="navbar-nav mr-auto">
             <li className="navbar-item">
-            
             <Link to="/exercises" className="nav-link">Exercises</Link>
           </li>
           <li className="navbar-item">
-          <Link to="/profile" className="nav-link">Profile</Link>
+            <Link to="/create" className="nav-link">Post New Workout</Link>
           </li>
           <li className="navbar-item">
           <Link to="/profile" className="nav-link">Profile</Link>
           </li>
           </ul>
           <div>
-          <h4> Welcome {user.username} !</h4>
+          <p className='d-none d-md-block greeting mr-4 mt-3'> Welcome {user.username} !</p>
           </div>
           
-        <button className="btn btn-primary" onClick={deleteSessions}>Log Out</button>
+        <button className="btn greeting-btn" onClick={deleteSessions}>Log Out</button>
         </>
       }
-      </div>
-    </nav>
+      </Navbar.Collapse>
+    </Navbar>
 
   );
 }
-export default Navbar
+export default NavbarNav;

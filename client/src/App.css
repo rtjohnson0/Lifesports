@@ -1,3 +1,11 @@
+/* style for navbar greeting */
+.greeting {
+  font-size: 20px;
+}
+.greeting-btn {
+  border: 1px solid black;
+}
+
 .navbar {
   background: #f29003;
   background: linear-gradient(162deg, #f29003 21%, #fafafa 98%);
@@ -219,10 +227,25 @@ tr:nth-of-type(odd) {
 
 .new-user {
   background-color: #eee;
-  width: 30%;
   margin: 0 auto;
   padding: 0 20px 30px;
   border-radius: 5px;
+}
+
+@media (min-width: 500px) {
+  .new-workout{
+    width: 100%;
+  }
+}
+@media (min-width: 740px) {
+  .new-workout {
+    width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .new-workout {
+    width: 32%;
+  }
 }
 .new-user h3 {
   margin: 40px auto;

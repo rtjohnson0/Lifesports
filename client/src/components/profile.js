@@ -5,14 +5,13 @@ import Nav from './nav'
 const Profile = () => {
     return (
         <>
-
             <Nav />
             <div class="container mr-md-3 w-100">
                 <div class="row">
                     <div class="tile">
                         <div class="item youtube">
-                        <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
-                        <hr className = "bg-light" />
+                        
+                        <hr className="bg-light" />
 
                  <div class="item youtube">
                             <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
