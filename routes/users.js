@@ -5,6 +5,7 @@
 
 const router = require('express').Router();
 let User = require('../models/user.model');
+let Exercise = require('../models/exercise.model');
 
 // Your Challenge: Make rwo routes. Each will use mongojs methods
 // to interact with your mongoDB database, as instructed below.
@@ -121,7 +122,7 @@ router.get('/profile', async(req,res) => {
 
 router.get('/:username', async(req,res) => {
     try {
-        const user = await User.find({username: req.params.username})
+        const user = await Exercise.find({username: req.params.username})
         res.send(user)
     }
     catch(err){

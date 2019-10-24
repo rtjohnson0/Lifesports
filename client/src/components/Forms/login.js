@@ -62,16 +62,16 @@ const Login = () => {
            />
          </div>
          <div className="form-group text-center">
-           <label className="sr-only">Username: </label>
+           <label className="sr-only">Password: </label>
            <input type="password"
              required
              className="form-control col-8 "
              onChange={e => setPassword(e.target.value)}
-             placeholder='username'
+             placeholder='password'
            />
          </div>
          <div className="form-group form-btn">
-          <button className="btn btn-primary" onClick={authenticate}>Login</button>
+          <button className="btn" onClick={authenticate}>Login</button>
          </div>
          
          <Link to='/sign-up' className="mt-4">Don't Have an Account? Sign Up!</Link>

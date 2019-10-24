@@ -45,13 +45,27 @@ background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
 
 .new-user {
   background-color: #eee;
-  width: 30%;
   margin: 0 auto;
   padding: 0 20px 30px;
   border: 1px solid #ff4e00;
   border-radius: 5px;
-
 }
+@media (min-width: 500px) {
+  .new-user {
+    width: 80%;
+  }
+}
+@media (min-width: 740px) {
+  .new-user {
+    width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .new-user {
+    width: 32%;
+  }
+}
+
 .new-user h3 {
   margin: 40px auto;
   padding: 10px 0 0;
@@ -82,8 +96,8 @@ background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
 }
 
 @media (min-width: 500px) {
-  .new-workout {
-    width: 70%;
+  .new-workout{
+    width: 100%;
   }
 }
 @media (min-width: 740px) {
@@ -126,9 +140,9 @@ background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
   width: 175px;
   background-color: #ff4e00;
   background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
-
-
 }
+
+
 
 /*# sourceMappingURL=index.css.map */
 
