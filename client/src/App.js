@@ -10,6 +10,7 @@ import ExercisesList from "./components/exercises-list.component";
 import EditExercise from "./components/edit-exercise.component";
 import CreateExercise from "./components/create-exercise.component";
 import CreateUser from "./components/Forms/create-user.component";
+import AddUser from "./components/Forms/AddUser";
 import Login from "./components/Forms/login";
 import Profile from './components/profile'
 import Home from './components/home'
@@ -28,7 +29,7 @@ function App() {
       
       <Route path="/create" component={CreateExercise} />
       <Route path="/sign-up" component={CreateUser} />
-      <Route path="/login" component={Login} />
+      <Route path="/login" component={AddUser} />
       <Route path="/profile" component={Profile} />
       <Route path="/exercises" exact component={ExercisesList} />
     </Router>
