@@ -65,7 +65,7 @@ function NavbarNav(props) {
       <Link to="/" className="navbar-brand">LifeSports</Link>
       <Navbar.Toggle aria-controls='basic-navbar-nav'/>
       <Navbar.Collapse id='basic-navbar-nav'>
-      {display === "noAuth" ?
+      {/* {display === "noAuth" ?
       //if user is not authenticated only show them login button
       <>
           <ul className="navbar-nav mr-auto">
@@ -75,7 +75,7 @@ function NavbarNav(props) {
         </Link>
         </>:
         // if user is authenticated show them all options
-        <>
+        <> */}
         <ul className="navbar-nav mr-auto">
             <li className="navbar-item">
             <Link to="/exercises" className="nav-link">Exercises</Link>
@@ -88,12 +88,15 @@ function NavbarNav(props) {
           </li>
           </ul>
           <div>
-          <p className='d-none d-md-block greeting mr-4 mt-3'> Welcome {user.username} !</p>
+          {/* <p className='d-none d-md-block greeting mr-4 mt-3'> Welcome {user.username} !</p> */}
           </div>
           
-        <button className="btn greeting-btn" onClick={deleteSessions}>Log Out</button>
-        </>
-      }
+          <Link to='/login'>
+          <button className="btn greeting-btn">Add User</button>
+        </Link>
+        {/* <button className="btn greeting-btn" onClick={deleteSessions}>Log Out</button> */}
+       
+      
       </Navbar.Collapse>
     </Navbar>
 
