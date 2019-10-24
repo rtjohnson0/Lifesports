@@ -1,3 +1,5 @@
+
+
 h3 {
   text-align: center;
   color: #f29003;
@@ -36,7 +38,9 @@ h3 {
 
 
 tr:nth-of-type(odd) {
-  background-color: #f29003;;
+background-color: #ff4e00;
+background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+
 }
 
 .new-user {
@@ -44,7 +48,9 @@ tr:nth-of-type(odd) {
   width: 30%;
   margin: 0 auto;
   padding: 0 20px 30px;
+  border: 1px solid #ff4e00;
   border-radius: 5px;
+
 }
 .new-user h3 {
   margin: 40px auto;
@@ -55,8 +61,8 @@ tr:nth-of-type(odd) {
 }
 .new-user .form-btn {
   width: 112px;
-  margin: 0 auto;
-  background-image: linear-gradient(to right, #D1913C 0%, #FFD194 51%, #D1913C 100%)
+  margin: 3 auto;
+
 }
 
 .new-user .form-btn:hover{
@@ -68,7 +74,13 @@ tr:nth-of-type(odd) {
   background-color: #eee;
   margin: 0 auto;
   border-radius: 5px;
+  border: 1px solid #ff4e00;
 }
+
+.date-input {
+  text-align: center;
+}
+
 @media (min-width: 500px) {
   .new-workout {
     width: 70%;
@@ -101,7 +113,6 @@ tr:nth-of-type(odd) {
 }
 .new-workout .date-input {
   padding: 0.375rem 0.75rem;
-  display: block;
   width: 145%;
   border-radius: 0.25rem;
   border: 1px solid #ced4da;
@@ -113,11 +124,10 @@ tr:nth-of-type(odd) {
 }
 .new-workout .btn {
   width: 175px;
-  background-image: linear-gradient(to right, #D1913C 0%, #FFD194 51%, #D1913C 100%)
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
 
-}
-.new-workout .btn:hover {
-background-position: right center; 
+
 }
 
 /*# sourceMappingURL=index.css.map */
