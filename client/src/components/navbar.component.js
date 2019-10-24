@@ -80,7 +80,7 @@ function Navbar(props) {
             <Link to="/exercises" className="nav-link">Exercises</Link>
           </li>
           <li className="navbar-item">
-            <Link to="/create" className="nav-link">Post New Workout</Link>
+          <Link to="/profile" className="nav-link">Profile</Link>
           </li>
           <li className="navbar-item">
           <Link to="/profile" className="nav-link">Profile</Link>
