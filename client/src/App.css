@@ -1,3 +1,24 @@
+.navbar {
+  background: #f29003;
+  background: linear-gradient(162deg, #f29003 21%, #fafafa 98%);
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #2ba2de;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -8,13 +29,6 @@ body {
   font: 14px "Open Sans", sans-serif;
   text-align: center;
 }
-
-
- .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-} 
 
 .tile {
   width: 100%;
@@ -35,7 +49,6 @@ body {
   font-size: 19px;
   position: relative;
 }
-
 
 .banner-img {
   padding: 5px 5px 0;
@@ -160,8 +173,8 @@ body {
   color: white;
 }
 
-.pageMargin {
-  margin-left: 25;
+.lead {
+  line-height: 20px;
 }
 
 h3 {

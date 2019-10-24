@@ -42,7 +42,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   uri = process.env.ATLAS_URI  // connection string for Atlas here  
 } else {
-<<<<<<< HEAD
   // uri = process.env.LOCAL_URI   // connection string for localhost mongo here  
   uri = process.env.LOCAL_URI
 }
@@ -54,19 +53,6 @@ mongoose.connect(process.env.LOCAL_URI, {
   useFindAndModify: false,
   useCreateIndex: true
 });
-=======
-  uri = process.env.ATLAS_URI
-  //"mongodb://localhost/Lifesports"
-}
-
-// connection to database
-mongoose.connect(process.env.ATLAS_URI, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true
-}
-);
->>>>>>> Daisha
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB connection is live");
