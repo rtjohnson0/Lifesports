@@ -7,7 +7,10 @@ import '../index.css';
 const Exercise = props => (
 
   <tr>
+    <Link to={'/user/' + props.exercise.username}>
     <td>{props.exercise.username}</td>
+    </Link>
+    
     <td>{props.exercise.description}</td>
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0, 10)}</td>
@@ -24,17 +27,20 @@ export default class ExercisesList extends Component {
 
     this.deleteExercise = this.deleteExercise.bind(this)
 
-    this.state = { exercises: [] };
+    this.state = { exercises: [], users: [] };
   }
 
   componentDidMount() {
-    axios.get('/exercises/')
-      .then(response => {
-        this.setState({ exercises: response.data })
+    axios.all([
+      axios.get('/exercises'),
+      axios.get('/users/')
+    ])
+    .then(axios.spread((exRes, userRes) => {
+      this.setState({
+        exercises: exRes.data,
+        users: userRes.data
       })
-      .catch((error) => {
-        console.log(error);
-      })
+    }))
   }
 
   deleteExercise(id) {
@@ -47,6 +53,7 @@ export default class ExercisesList extends Component {
   }
 
   exerciseList() {
+    
     return this.state.exercises.map(currentexercise => {
       return <Exercise exercise={currentexercise} deleteExercise={this.deleteExercise} key={currentexercise._id} />;
     })

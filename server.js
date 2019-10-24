@@ -6,6 +6,8 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require("morgan");
+const session = require("express-session");
+const MongoStore = require('connect-mongo')(session);
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -25,7 +27,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // connection to database
-mongoose.connect(process.env.ATLAS_URI, { 
+mongoose.connect(uri, { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -35,6 +37,16 @@ const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB connection is live");
 })
+
+//use express-sessions and store session data in mongo
+app.use(session({
+  secret: process.env.SECRET,
+  resave: true,
+  saveUninitialized: false,
+  store: new MongoStore({
+    mongooseConnection: connection
+  })
+}))
 
 // register api catalogue
 const exercisesRouter = require('./routes/exercises');
