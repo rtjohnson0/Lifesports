@@ -14,10 +14,13 @@ const Profile = () => {
                         <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
                         <hr className = "bg-light" />
 
-                        <video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop" width="100%" height="20%" >
-            <source src="images/Videoback1.mp4" type="video/mp4" />
-        </video>
+                 <div class="item youtube">
+                            <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
+                            <hr className="bg-light" />
 
+                            <video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop" width="100%" height="100%" >
+                                <source src="images/Videoback1.mp4" type="video/mp4" />
+                            </video>
                         </div>
                         <div class="dates">
                             <div class="start ">
@@ -83,7 +86,7 @@ const Profile = () => {
                 </div>
 
             </div>
-
+        </div>
         </>
 
 
