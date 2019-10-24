@@ -22,6 +22,7 @@ function App() {
       <Route path="/create" component={CreateExercise} />
       <Route path="/user" component={CreateUser} />
       <Route path="/profile" component={Profile} />
+      <Route path="/home" component={Home} />
 
     </Router>
   );

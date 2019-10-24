@@ -20,7 +20,6 @@ function Navbar() {
           </li>
           <li className="navbar-item">
             <Link to="/" className="nav-link">Exercises</Link>
-            <Link to="/profile" className="nav-link">Profile</Link>
           </li>
           <li className="navbar-item">
             <Link to="/create" className="nav-link">Post New Workout</Link>
