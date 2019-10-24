@@ -6,59 +6,59 @@ import axios from 'axios';
 
 function NavbarNav(props) {
 
-  const {display, setDisplay} = props;
+  // const {display, setDisplay} = props;
 
-  //delete sessions
-  const deleteSessions = async () => {
-    try{
-      await axios.get('/users/logout');
-      setDisplay('auth');
-      window.location = '/';
-    }catch(e) {
-      console.log(e);
-    }
-  }
+  // //delete sessions
+  // const deleteSessions = async () => {
+  //   try{
+  //     await axios.get('/users/logout');
+  //     setDisplay('auth');
+  //     window.location = '/';
+  //   }catch(e) {
+  //     console.log(e);
+  //   }
+  // }
 
-  //get session
-  const getSession = async() => {
-    try {
-      const res = await axios.get('/users/sessions')
-      if(res.data.session !== undefined){
-        setDisplay('auth')
-      } else {
-        setDisplay('noAuth')
-      }
-    }
-    catch(e){
-      console.log(e)
-    }
-  }
+  // //get session
+  // const getSession = async() => {
+  //   try {
+  //     const res = await axios.get('/users/sessions')
+  //     if(res.data.session !== undefined){
+  //       setDisplay('auth')
+  //     } else {
+  //       setDisplay('noAuth')
+  //     }
+  //   }
+  //   catch(e){
+  //     console.log(e)
+  //   }
+  // }
 
   //calling the current user
-  const [user, setUser] = useState([]);
+  // const [user, setUser] = useState([]);
 
-    const fetchUsers = async () => {
-        try {
-            const res = await fetch('/users/profile');
-            const text = await res.text();
-            const result = text.length ? JSON.parse(text): {}
-            // console.log(result)
-            setUser(result)
-        } 
-        catch(err){
-            throw err;
-        }
-    }
+  //   const fetchUsers = async () => {
+  //       try {
+  //           const res = await fetch('/users/profile');
+  //           const text = await res.text();
+  //           const result = text.length ? JSON.parse(text): {}
+  //           // console.log(result)
+  //           setUser(result)
+  //       } 
+  //       catch(err){
+  //           throw err;
+  //       }
+  //   }
 
-    useEffect(() => {
-        fetchUsers()
-    }, []);
+  //   useEffect(() => {
+  //       fetchUsers()
+  //   }, []);
 
-  //getting current user
+  // //getting current user
 
-  useEffect(() => {
-    getSession()
-  }, [])
+  // useEffect(() => {
+  //   getSession()
+  // }, [])
 
   return (
     <Navbar expand="lg">

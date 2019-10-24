@@ -3,52 +3,52 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 const CreateUser = () => {
-  const [display, setDisplay ] = useState('noAuth');
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
-  const [error, setError] = useState();
+  // const [display, setDisplay ] = useState('noAuth');
+  // const [username, setUsername] = useState();
+  // const [password, setPassword] = useState();
+  // const [error, setError] = useState();
 
-  //authenticating the form
-  const authenticate = async () => {
-    try{
-      const user = {
-        username, password
-      }
-      const res = await axios.post('/users/sign-up', user)
-      if(res.data.session !== undefined){
-        console.log(res.data)
-        setDisplay('auth')
-      }
-      window.location = '/login'
-    }
-    catch(e){
-      setError(true);
-    }
-  }
+  // //authenticating the form
+  // const authenticate = async () => {
+  //   try{
+  //     const user = {
+  //       username, password
+  //     }
+  //     const res = await axios.post('/users/sign-up', user)
+  //     if(res.data.session !== undefined){
+  //       console.log(res.data)
+  //       setDisplay('auth')
+  //     }
+  //     window.location = '/login'
+  //   }
+  //   catch(e){
+  //     setError(true);
+  //   }
+  // }
 
-  //getting session information for persistant data
-  const getSession = async() => {
-    try {
-      const res = await axios.get('/users/sessions')
-      if(res.data.session !== undefined){
-        console.log(res.data)
-        setDisplay('auth')
-      } else {
-        setDisplay('noAuth')
-      }
-    }
-    catch(e){
-      console.log(e)
-    }
-  }
+  // //getting session information for persistant data
+  // const getSession = async() => {
+  //   try {
+  //     const res = await axios.get('/users/sessions')
+  //     if(res.data.session !== undefined){
+  //       console.log(res.data)
+  //       setDisplay('auth')
+  //     } else {
+  //       setDisplay('noAuth')
+  //     }
+  //   }
+  //   catch(e){
+  //     console.log(e)
+  //   }
+  // }
 
-  useEffect(() => {
-    getSession()
-  }, [])
+  // useEffect(() => {
+  //   getSession()
+  // }, [])
 
   return(
     <div>
-      {display === 'noAuth'
+      {/* {display === 'noAuth'
       ? <div className="new-user">
        <h3>Sign Up</h3>
        {
@@ -79,7 +79,7 @@ const CreateUser = () => {
         <Link to="/login">Already have an account? Log In!</Link>
      </div>
      : <h1>Logged in</h1>
-      }
+      } */}
     </div>
   );
 }

@@ -84,15 +84,15 @@ router.put('/update/:id', async (req, res) => {
 })
 
 //find exercises by user
-router.get('/:username', async(req, res) => {
-    try {
-        const exercise = await Exercise.find(
-            {username: { $in : [req.params.username]}})
-        return res.send(exercise)
-    }
-    catch(err){
-        res.status(500).json({message: err.message})
-    }
-})
+// router.get('/:username', async(req, res) => {
+//     try {
+//         const exercise = await Exercise.find(
+//             {username: { $in : [req.params.username]}})
+//         return res.send(exercise)
+//     }
+//     catch(err){
+//         res.status(500).json({message: err.message})
+//     }
+// })
 
 module.exports = router;

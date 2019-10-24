@@ -9,7 +9,7 @@ import Navbar from "./components/navbar.component"
 import ExercisesList from "./components/exercises-list.component";
 import EditExercise from "./components/edit-exercise.component";
 import CreateExercise from "./components/create-exercise.component";
-import CreateUser from "./components/Forms/create-user.component";
+import CreateUser from "./components/create-user.component";
 import AddUser from "./components/Forms/AddUser";
 import Login from "./components/Forms/login";
 import Profile from './components/profile'
@@ -28,8 +28,8 @@ function App() {
       <Route path="/user/:username" component={Profiles} />
       
       <Route path="/create" component={CreateExercise} />
-      <Route path="/sign-up" component={CreateUser} />
-      <Route path="/login" component={AddUser} />
+      {/* <Route path="/sign-up" component={CreateUser} /> */}
+      <Route path="/login" component={CreateUser} />
       <Route path="/profile" component={Profile} />
       <Route path="/exercises" exact component={ExercisesList} />
     </Router>

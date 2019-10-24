@@ -3,50 +3,50 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 const Login = () => {
-  const [display, setDisplay ] = useState('noAuth');
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
-  const [error, setError] = useState();
+  // const [display, setDisplay ] = useState('noAuth');
+  // const [username, setUsername] = useState();
+  // const [password, setPassword] = useState();
+  // const [error, setError] = useState();
 
-  //authenticating the form
-  const authenticate = async () => {
-    try{
-      const user = {
-        username, password
-      }
-      const res = await axios.post('/users/login', user)
-      if(res.data.session !== undefined){
-        console.log(res.data)
-        setDisplay('auth')
-      }
-    }
-    catch(e){
-      setError(true)
-    }
-  }
+  // //authenticating the form
+  // const authenticate = async () => {
+  //   try{
+  //     const user = {
+  //       username, password
+  //     }
+  //     const res = await axios.post('/users/login', user)
+  //     if(res.data.session !== undefined){
+  //       console.log(res.data)
+  //       setDisplay('auth')
+  //     }
+  //   }
+  //   catch(e){
+  //     setError(true)
+  //   }
+  // }
 
-  //getting session information for persistant data
-  const getSession = async() => {
-    try {
-      const res = await axios.get('/users/sessions')
-      if(res.data.session !== undefined){
-        setDisplay('auth')
-      } else {
-        setDisplay('noAuth')
-      }
-    }
-    catch(e){
-      console.log(e)
-    }
-  }
+  // //getting session information for persistant data
+  // const getSession = async() => {
+  //   try {
+  //     const res = await axios.get('/users/sessions')
+  //     if(res.data.session !== undefined){
+  //       setDisplay('auth')
+  //     } else {
+  //       setDisplay('noAuth')
+  //     }
+  //   }
+  //   catch(e){
+  //     console.log(e)
+  //   }
+  // }
 
-  useEffect(() => {
-    getSession()
-  }, [])
+  // useEffect(() => {
+  //   getSession()
+  // }, [])
 
   return(
     <div>
-      {display === 'noAuth'
+      {/* {display === 'noAuth'
       ? <div className="new-user">
        <h3>Login</h3>
        {
@@ -78,7 +78,7 @@ const Login = () => {
      </div>
      :
      window.location = '/profile'
-      }
+      } */}
     </div>
   );
 }
