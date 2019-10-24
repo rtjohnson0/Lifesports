@@ -7,21 +7,18 @@ const Profile = () => {
         <>
 
             <Nav />
-
-
             <div class="container mr-md-3 w-100">
                 <div class="row">
-
                     <div class="tile">
+                        <div class="item youtube">
+                        <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
+                        <hr className = "bg-light" />
 
-                 <div class="item youtube">
-                            <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
-                            <hr className="bg-light" />
-
-                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/nzHTl8r291Q" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen include></iframe>
+                        <video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop" width="100%" height="20%" >
+            <source src="images/Videoback1.mp4" type="video/mp4" />
+        </video>
 
                         </div>
-
                         <div class="dates">
                             <div class="start ">
                                 <strong>Signed In</strong> 12:30pm OCT 17 2019

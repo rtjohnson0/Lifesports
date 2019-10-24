@@ -5,7 +5,9 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const morgan = require('morgan');
+const morgan = require("morgan");
+const session = require("express-session");
+const MongoStore = require('connect-mongo')(session);
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -15,27 +17,6 @@ let uri = ""
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('dev'));
-
-// const User = require('./models/user.model.js')
-// const Exercise = require('./models/exercise.model.js')
-// User.create([
-//   {
-//     "username": "daisha"
-//   },
-//   {
-//     "username": "arely"
-//   }
-// ])
-
-// Exercise.create([
-//   {
-//     "username": "daisha",
-//     "description": "running",
-//     "duration": "60",
-//     "date": "2019-10-16"
-//   }
-// ])
-
 
 // Serve up static assets (heroku)
 if (process.env.NODE_ENV === "production") {
@@ -47,7 +28,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // connection to database
-mongoose.connect(process.env.LOCAL_URI, {
+mongoose.connect(uri, { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -57,6 +38,16 @@ const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB connection is live");
 })
+
+//use express-sessions and store session data in mongo
+app.use(session({
+  secret: process.env.SECRET,
+  resave: true,
+  saveUninitialized: false,
+  store: new MongoStore({
+    mongooseConnection: connection
+  })
+}))
 
 // register api catalogue
 const exercisesRouter = require('./routes/exercises');

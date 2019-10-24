@@ -90,7 +90,7 @@ export default class EditExercise extends Component {
     axios.put('/exercises/update/' + this.props.match.params.id, exercise)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    window.location = '/exercises';
   }
 
   render() {
