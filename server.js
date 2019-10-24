@@ -21,15 +21,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   uri = process.env.ATLAS_URI  // connection string for Atlas here  
 } else {
-  uri = process.env.LOCAL_URI   // connection string for localhost mongo here  
+  // uri = process.env.LOCAL_URI   // connection string for localhost mongo here  
+  uri = process.env.LOCAL_URI
 }
 
 // connection to database
-mongoose.connect(uri, { 
+mongoose.connect(process.env.LOCAL_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
-  useCreateIndex: true 
+  useCreateIndex: true
 });
 const connection = mongoose.connection;
 connection.once('open', () => {
@@ -38,17 +39,17 @@ connection.once('open', () => {
 
 // register api catalogue
 const exercisesRouter = require('./routes/exercises');
-const usersRouter =     require('./routes/users');
+const usersRouter = require('./routes/users');
 
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 
 // Creating live connection to reactjs app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
+  console.log(`Server is running on port: ${port}`);
 });

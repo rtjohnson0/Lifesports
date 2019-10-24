@@ -16,10 +16,10 @@ const Profile = () => {
 
 
                         <div class="item youtube">
-                        <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
-                        <hr className = "bg-light" />
+                            <div class="header"> <i class="fab fa-youtube"></i>Highlights</div>
+                            <hr className="bg-light" />
 
-                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/nzHTl8r291Q" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen include></iframe>
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/nzHTl8r291Q" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen include></iframe>
 
                         </div>
 

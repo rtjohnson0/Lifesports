@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../index.css';
+import '../App.css';
 
 export default class CreateUser extends Component {
   constructor(props) {
@@ -53,7 +53,7 @@ export default class CreateUser extends Component {
             />
           </div>
           <div className="form-group form-btn">
-            <input type="submit" value="Create User" className="btn btn-primary" />
+            <input type="submit" value="Create User" className="btn" />
           </div>
         </form>
       </div>
