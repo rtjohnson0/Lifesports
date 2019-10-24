@@ -10,6 +10,7 @@ import EditExercise from "./components/edit-exercise.component";
 import CreateExercise from "./components/create-exercise.component";
 import CreateUser from "./components/create-user.component";
 import Profile from './components/profile'
+import Home from './components/home'
 
 function App() {
   return (
